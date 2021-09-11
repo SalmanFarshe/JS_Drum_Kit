@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Fira Code', monospace;
+}
+.overlay{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.493);
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/dramset.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.key_wrapper{
+    width: 60%;
+    margin-top: 14px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: repeat(5, 50px);
+    justify-content: space-around;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.key{
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.200);
+    color: yellow;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    transition: 0.1s;
+    border: 2px solid black;
+}
+.key:hover{
+    background-color: rgba(255, 255, 0, 0.200);
+    color: black;
+}
+.playing{
+    background-color: rgba(248, 0, 0, 0.2);
+    box-shadow: 0px 0px 40px -10px yellow;
+    transition: 0.1s;
+    font-size: 26px;
+}
+.key-26{
+    grid-column: -4/-3;
+}
+
+/* mackingresponsive */
+@media (max-width:780px) {
+    .key{
+        height: 40px;
+        width: 20px;;
+    }
+}
+@media (max-width:370px) {
+    .key{
+        height: 35px;
+        width: 10px;;
+    }
+    .key_wrapper{
+        grid-gap: 5px;
+    }
+}
